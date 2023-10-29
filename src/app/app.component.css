@@ -1,0 +1,28 @@
+.container {
+    width: 60%;
+}
+
+.navbar-nav>li {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.nav-item>a:hover {
+    color: blue;
+}
+
+.navbar {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+.text-center {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.nav-border {
+    border-radius: 30px;
+}
