@@ -27,12 +27,12 @@ import { CachingInterceptor } from './leagues/shared/league-cache.interceptor';
     ]),
     LeagueRoutingModule
   ],
-  providers: [    {
+  providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: CachingInterceptor,
     multi: true
   }],
-  
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

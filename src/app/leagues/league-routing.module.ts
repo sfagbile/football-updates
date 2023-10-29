@@ -11,12 +11,13 @@ import { LeagueStandingGuard } from './league-standing/league-standing.guard';
   ],
   imports: [
     RouterModule.forChild([
-      { path: 'standings/:id', 
-      canActivate: [LeagueStandingGuard],
-      component: LeagueStandingComponent },
-      { path: 'fixtures', component: LeagueFixtureComponent } 
+      {
+        path: 'standings/:id',
+        canActivate: [LeagueStandingGuard],
+        component: LeagueStandingComponent
+      },
+      { path: 'fixtures', component: LeagueFixtureComponent }
     ]),
   ],
- // exports: [RouterModule]
 })
 export class LeagueRoutingModule { }

@@ -1,49 +1,49 @@
 export interface IFixture {
-    get:        string;
+    get: string;
     parameters: Parameters;
-    results:    number;
-    paging:     Paging;
-    response:   Response[];
+    results: number;
+    paging: Paging;
+    response: Response[];
 }
 
 export interface Paging {
     current: number;
-    total:   number;
+    total: number;
 }
 
 export interface Parameters {
     league: string;
-    team:   string;
-    last:   string;
+    team: string;
+    last: string;
 }
 
 export interface Response {
     fixture: Fixture;
-    league:  League;
-    teams:   Teams;
-    goals:   Goals;
-    score:   Score;
+    league: League;
+    teams: Teams;
+    goals: Goals;
+    score: Score;
 }
 
 export interface Fixture {
-    id:        number;
-    referee:   string;
-    timezone:  Timezone;
-    date:      Date;
+    id: number;
+    referee: string;
+    timezone: Timezone;
+    date: Date;
     timestamp: number;
-    periods:   Periods;
-    venue:     Venue;
-    status:    Status;
+    periods: Periods;
+    venue: Venue;
+    status: Status;
 }
 
 export interface Periods {
-    first:  number;
+    first: number;
     second: number;
 }
 
 export interface Status {
-    long:    Long;
-    short:   Short;
+    long: Long;
+    short: Short;
     elapsed: number;
 }
 
@@ -60,7 +60,7 @@ export enum Timezone {
 }
 
 export interface Venue {
-    id:   number;
+    id: number;
     name: string;
     city: City;
 }
@@ -72,30 +72,30 @@ export enum City {
 }
 
 export interface Goals {
-    home:  number;
+    home: number;
     away: number;
 }
 
-export interface Teams{
+export interface Teams {
     home: Team,
     away: Team
 }
 
 export interface Team {
-    id:     number;
-    name:   string;
-    logo:   string;
+    id: number;
+    name: string;
+    logo: string;
     winner: boolean;
 }
 
 export interface League {
-    id:      number;
-    name:    Name;
+    id: number;
+    name: Name;
     country: Country;
-    logo:    string;
-    flag:    string;
-    season:  number;
-    round:   string;
+    logo: string;
+    flag: string;
+    season: number;
+    round: string;
 }
 
 export enum Country {
@@ -107,8 +107,8 @@ export enum Name {
 }
 
 export interface Score {
-    halftime:  Goals;
-    fulltime:  Goals;
+    halftime: Goals;
+    fulltime: Goals;
     extratime: Goals;
-    penalty:   Goals;
+    penalty: Goals;
 }
