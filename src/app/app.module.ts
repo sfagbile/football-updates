@@ -23,7 +23,7 @@ import { CachingInterceptor } from './leagues/shared/league-cache.interceptor';
     RouterModule.forRoot([
       { path: 'standings', component: LeagueStandingComponent },
       { path: '', redirectTo: 'standings', pathMatch: 'full' },
-      { path: '**', redirectTo: 'standings/:id', pathMatch: 'full' },
+      { path: '**', redirectTo: 'standings', pathMatch: 'full' },
     ]),
     LeagueRoutingModule
   ],
