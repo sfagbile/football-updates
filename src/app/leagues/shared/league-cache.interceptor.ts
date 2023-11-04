@@ -27,7 +27,6 @@ export class CachingInterceptor implements HttpInterceptor {
             const currentTime = Date.now();
 
             const ttl = environment.CACHE_TTL;
-            console.log(cachedData);
             if (currentTime - cacheTimestamp <= ttl) {
                 return of(new HttpResponse({ body: cachedData }));
             }
